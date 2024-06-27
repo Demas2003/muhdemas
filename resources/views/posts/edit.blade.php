@@ -43,15 +43,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">KODE FAKULTAS</label>
-                                <input type="text" class="form-control @error('kode_fakultas') is-invalid @enderror" name="kode_fakultas" value="{{ old('kode_fakultas', $post->kode_fakultas) }}" placeholder="Masukkan Kode Fakultas">
-                            
-                                <!-- error message untuk kode_fakultas -->
-                                @error('kode_fakultas')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                                <label class="font-weight-bold">ID FAKULTAS</label>
+                                <select class="form-control select3" style="width: 100%;" name="fakultas_id" id="fakultas_id"> 
+                                <option disabled value>PILIH FAKULTAS</option>
+                                @foreach ($fak as $item)
+                                <option value="{{ $item->id }}">{{ $item->nama_fakultas }}</option>
+                                @endforeach
+                                </select>
+                                                            
                             </div>
 
                             <button type="submit" class="btn btn-md btn-primary">UPDATE</button>

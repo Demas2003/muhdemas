@@ -44,8 +44,9 @@ class ProgramStudiController extends Controller
 
     public function edit($id): View
     {
+        $fak = Fakultas::all();
         $post = Program_studi::findOrFail($id);
-        return view('posts.edit', compact('post'));
+        return view('posts.edit', compact('post','fak'));
     }
 
     public function update(Request $request, $id): RedirectResponse

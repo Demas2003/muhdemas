@@ -28,6 +28,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/posts', [ProgramStudiController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [ProgramStudiController::class, 'create'])->name('posts.create');
 Route::post('/posts', [ProgramStudiController::class, 'store'])->name('posts.store');

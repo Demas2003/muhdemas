@@ -339,7 +339,11 @@ return [
             'submenu' => [
                 [
                     'text' => 'Data Program Studi',
-                    'url' => '#',
+                    'url' => 'posts',
+                ],
+                [
+                    'text' => 'Data Fakultas',
+                    'url' => 'fakultas',
                 ]
             ],
         ],
