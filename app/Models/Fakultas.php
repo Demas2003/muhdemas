@@ -9,15 +9,14 @@ class Fakultas extends Model
 {
     use HasFactory;
     protected $table = "fakultas";
-    protected $primarykey = "id";
+    protected $primaryKey = "id";
     protected $fillable = [
-        'id',
         'nama_fakultas',
         'pimpinan_fakultas',
     ];
 
     public function program_studis()
     {
-        return $this->hasMany(Program_studi::class);
+        return $this->hasMany(Program_studi::class, 'fakultas_id');
     }
 }

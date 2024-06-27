@@ -9,16 +9,16 @@ class Program_studi extends Model
 {
     use HasFactory;
     protected $table = 'program_studis';
-    protected $primarykey = 'id';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'kode_prodi',
         'nama_prodi',
-        'id_fakultas',
+        'fakultas_id',
     ];
 
     public function fakultas()
     {
-        return $this->belongsTo(Fakultas::class);
+        return $this->belongsTo(Fakultas::class, 'fakultas_id');
     }
 
 }

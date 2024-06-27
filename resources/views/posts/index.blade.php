@@ -35,7 +35,8 @@
                                 <tr>
                                     <td>{{ $post->kode_prodi }}</td>
                                     <td>{{ $post->nama_prodi }}</td>
-                                    <td>{!! $post->fakultas->nama_fakultas !!}</td>
+                                    <td>{!! $post->fakultas ? $post->fakultas->nama_fakultas : 'Tidak ada fakultas' !!}</td>
+
                                     <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
                                             <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark">SHOW</a>
