@@ -14,13 +14,13 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <form action="{{ route('fakultas.update', $fakultas->id) }}" method="POST">
+                        <form action="{{ route('fakultas.update', $dataFakultas->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Nama Fakultas</label>
-                                <input type="text" class="form-control @error('nama_fakultas') is-invalid @enderror" name="nama_fakultas" value="{{ old('nama_fakultas', $fakultas->nama_fakultas) }}" placeholder="Masukkan Nama Fakultas">
+                                <input type="text" class="form-control @error('nama_fakultas') is-invalid @enderror" name="nama_fakultas" value="{{ old('nama_fakultas', $dataFakultas->nama_fakultas) }}" placeholder="Masukkan Nama Fakultas">
                             
                                 <!-- error message untuk nama_fakultas -->
                                 @error('nama_fakultas')
@@ -32,7 +32,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Pimpinan Fakultas</label>
-                                <input type="text" class="form-control @error('pimpinan_fakultas') is-invalid @enderror" name="pimpinan_fakultas" value="{{ old('pimpinan_fakultas', $fakultas->pimpinan_fakultas) }}" placeholder="Masukkan Nama Pimpinan Fakultas">
+                                <input type="text" class="form-control @error('pimpinan_fakultas') is-invalid @enderror" name="pimpinan_fakultas" value="{{ old('pimpinan_fakultas', $dataFakultas->pimpinan_fakultas) }}" placeholder="Masukkan Nama Pimpinan Fakultas">
                             
                                 <!-- error message untuk pimpinan_fakultas -->
                                 @error('pimpinan_fakultas')
