@@ -344,6 +344,10 @@ return [
                 [
                     'text' => 'Data Fakultas',
                     'url' => 'fakultas',
+                ],
+                [
+                    'text' => 'Data Sekolah',
+                    'url' => 'sekolah',
                 ]
             ],
         ],

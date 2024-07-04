@@ -35,3 +35,5 @@ Route::post('/posts', [ProgramStudiController::class, 'store'])->name('posts.sto
 Route::get('/posts/{id}/edit', [ProgramStudiController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{id}', [ProgramStudiController::class, 'update'])->name('posts.update');
 Route::delete('/posts/{id}', [ProgramStudiController::class, 'destroy'])->name('posts.destroy');
+Route::get('/fetch-sekolah', [App\Http\Controllers\SekolahController::class, 'fetchSekolah']);
+Route::get('/sekolah', [App\Http\Controllers\SekolahController::class, 'index']);
